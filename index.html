@@ -5,8 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Etch-A-Sketch</title>
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    
+    <div class="site-container">
+        <div class="action-pane">
+            <button>Choose Size</button>
+            <button>Clear Screen</button>
+            <button>Eraser</button>
+            <button>Rainbow</button>
+        </div><!-- end action-pane -->
+        <div class="etch-a-sketch">
+            <div id="title-bar">
+                <p>
+                    <span class="magic-screen">MAGIC</span>
+                    <span class="logo">Etch-A-Sketch</span>
+                    <span class="magic-screen">SCREEN</span>
+                </p>
+            </div><!-- end title-bar -->
+            <div id="screen">
+
+            </div><!-- end screen -->
+            <div id="white-buttons">
+                <button class="white-button" id="left"></button>
+                <button class="white-button" id="right"></button>
+            </div><!-- end white-buttons -->
+
+        </div><!--  end etch-a-sketch-->
+    </div><!-- end site-container-->
+    <script src="script.js"></script>
 </body>
 </html>

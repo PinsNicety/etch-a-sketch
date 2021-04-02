@@ -1,0 +1,119 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.site-container {
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: 25% 75%;
+    grid-template-areas: "action-pane etch-a-sketch";
+    width: 100%;
+    height: 100vh;
+    background-color: grey;
+}
+
+.action-pane {
+    grid-area: action-pane;
+    background-color: rgba(0, 0, 0, 0.548);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 50%;
+    width: 50%;
+    margin: auto;
+    border-radius: 25px;
+    filter: drop-shadow(0px 0px 1px white);
+}
+
+.action-pane button {
+    font-family: monospace;
+    width: 200px;
+    height: 45px;
+    background-color: rgba(0, 0, 0, 0);
+    border: white 1px solid;
+    border-radius: 10px;
+    color: white;
+}
+
+.action-pane button:hover {
+    background-color: rgba(255, 0, 0, 0.671);
+    cursor: pointer;
+}
+
+.action-pane button:active {
+    background-color: rgba(255, 217, 0, 0.25);
+    cursor: pointer;
+}
+
+.etch-a-sketch {
+    grid-area: etch-a-sketch;
+    background-color: rgba(255, 0, 0, 0.671);
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    width: 80%;
+    margin: auto;
+    border-radius: 25px;
+    filter: drop-shadow(0px 0px 2px black);
+}
+
+#title-bar {
+    display: flex;
+    margin: auto;
+}
+
+.magic-screen {
+    font-size: 30px;
+    font-family: monospace;
+    color: rgba(255, 217, 0, 0.767);
+}
+
+.logo {
+    font-size: 50px;
+    color: rgba(255, 217, 0, 0.767);
+}
+/* end title-bar */
+
+
+#screen {
+    background-color: rgb(148, 146, 146);
+    display: flex;
+    width: 900px;
+    height: 500px;
+    margin: auto;
+    filter: drop-shadow(0px 0px 1px black);
+}
+/* end screen */
+
+
+#white-buttons {
+    display: flex;
+    width: 100%;
+    height: 100px;;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.white-button {
+    height: 80px;
+    width: 80px;
+    background-color: white;
+    border-radius: 50%;
+    border: none;
+    filter: drop-shadow(0px 0px 1px black);
+}
+
+#left {
+    margin-left: 25px;
+    margin-bottom: 25px;
+}
+
+#right {
+    margin-right: 25px;
+    margin-bottom: 25px;;
+}
+/* end white-buttons */
+
+
