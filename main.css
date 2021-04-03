@@ -23,7 +23,7 @@ body {
     height: 50%;
     width: 50%;
     margin: auto;
-    border-radius: 25px;
+    border-radius: 15px;
     filter: drop-shadow(0px 0px 1px white);
 }
 
@@ -62,7 +62,21 @@ body {
 #title-bar {
     display: flex;
     margin: auto;
+    position: relative;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
 }
+
+#title-bar:after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    background-color: black;
+    bottom: 0;
+    width: 80%;
+}
+
 
 .magic-screen {
     font-size: 30px;
@@ -80,13 +94,16 @@ body {
 #screen {
     background-color: rgb(148, 146, 146);
     display: flex;
+    flex-wrap: wrap;
     width: 900px;
     height: 500px;
     margin: auto;
     filter: drop-shadow(0px 0px 1px black);
 }
-/* end screen */
 
+.box {
+    box-shadow:0px 0px 0px 1px rgb(138, 134, 134) inset;
+}
 
 #white-buttons {
     display: flex;
