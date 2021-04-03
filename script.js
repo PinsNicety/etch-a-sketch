@@ -59,7 +59,7 @@ function setGridSize () {
         box.setAttribute('id', `pixel${ i }`);
         box.style.width = `${ boxWidth }px`;
         box.style.height = `${ boxHeight }px`;
-        box.addEventListener('mousedown', (e) => {
+        box.addEventListener('mouseover', (e) => {
             if (currentColor === 'transparent') box.style.backgroundColor = 'black';
             else box.style.backgroundColor = currentColor;
         });
