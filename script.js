@@ -48,6 +48,7 @@ actionButtons.forEach((button) => {
 
 function setGridSize () {
     gridSize = parseInt(prompt("Choose a grid size from 1-100:", ""));
+    if (gridSize > 100) return setGridSize();
     screen.innerHTML = '';
     boxes = []
     let boxWidth = 900 / gridSize;
@@ -58,7 +59,7 @@ function setGridSize () {
         box.setAttribute('id', `pixel${ i }`);
         box.style.width = `${ boxWidth }px`;
         box.style.height = `${ boxHeight }px`;
-        box.addEventListener('mouseover', (e) => {
+        box.addEventListener('mousedown', (e) => {
             if (currentColor === 'transparent') box.style.backgroundColor = 'black';
             else box.style.backgroundColor = currentColor;
         });
