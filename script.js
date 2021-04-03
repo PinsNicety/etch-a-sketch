@@ -9,7 +9,7 @@ const BOXBACKGROUND = 'transparent';
 // set selectors
 const screen = document.querySelector('#screen');
 
-// set default color
+// align active button with default currentColo
 document.querySelector('#black').style.backgroundColor = 'rgba(255, 217, 0, 0.25)';
 
 // set eventListeners
@@ -64,14 +64,14 @@ function setGridSize () {
         });
         screen.appendChild(box);
         boxes.push(box);
-    }
-}
+    };
+};
 
 function clearScreen () {
     boxes.forEach((box) => {
-        box.style.backgroundColor = 'transparent'
-    })
-}
+        box.style.backgroundColor = 'transparent';
+    });
+};
 
 function setPenColor (color) {
     console.log(color)
