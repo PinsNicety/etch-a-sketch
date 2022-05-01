@@ -1,9 +1,9 @@
 // set variables
 let gridSize = 0;
 let currentColor = 'black';
+let boxes = [];
 
 // set constants
-let boxes = [];
 const BOXBACKGROUND = 'transparent';
 
 // set selectors
@@ -16,6 +16,8 @@ document.querySelector('#black').style.backgroundColor = 'rgba(255, 217, 0, 0.25
 const actionButtons = document.querySelectorAll('.action-btn');
 actionButtons.forEach((button) => {
     button.addEventListener('click', (e) => {
+        console.log(e)
+
         let button = document.querySelector(`#${ e.target.id }`)
         switch(e.target.id) {
             case 'choose-size': 
@@ -27,21 +29,20 @@ actionButtons.forEach((button) => {
             case 'eraser': 
                 setPenColor(BOXBACKGROUND);
                 button.style.backgroundColor = 'rgba(255, 217, 0, 0.25)';
-                document.querySelector('#yellow').style.backgroundColor = 'transparent';
-                document.querySelector('#black').style.backgroundColor = 'transparent';
+                document.querySelector('#yellow').style.backgroundColor = 'rgba(0, 0, 0, 0)';
+                document.querySelector('#black').style.backgroundColor = 'rgba(0, 0, 0, 0)';
                 break;
             case 'yellow': 
                 setPenColor('yellow');
                 button.style.backgroundColor = 'rgba(255, 217, 0, 0.25)';
-                document.querySelector('#black').style.backgroundColor = 'transparent';
-                document.querySelector('#eraser').style.backgroundColor = 'transparent';
+                document.querySelector('#black').style.backgroundColor = 'rgba(0, 0, 0, 0)';
+                document.querySelector('#eraser').style.backgroundColor = 'rgba(0, 0, 0, 0)';
                 break;
             case 'black': 
                 setPenColor('black');
                 button.style.backgroundColor = 'rgba(255, 217, 0, 0.25)';
-                document.querySelector('#yellow').style.backgroundColor = 'transparent';
-                document.querySelector('#eraser').style.backgroundColor = 'transparent';
-                break;
+                document.querySelector('#yellow').style.backgroundColor = 'rgba(0, 0, 0, 0)';
+                document.querySelector('#eraser').style.backgroundColor = 'rgba(0, 0, 0, 0)';
         }
     })
 })
